@@ -1,8 +1,8 @@
 {
   "name": "angular-bem",
-  "version": "2.2.0",
-  "description": "A set of Angular (v2+) directives to simplify your workflow with BEM methodology",
-  "main": "bundles/angular-bem.umd.js",
+  "version": "3.0.0",
+  "description": "A set of Angular (v15+) directives to simplify your workflow with BEM methodology",
+  "main": "dist/bundles/angular-bem.umd.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tenphi/angular-bem.git"
@@ -19,24 +19,27 @@
     "url": "https://github.com/tenphi/angular-bem/issues"
   },
   "homepage": "https://github.com/tenphi/angular-bem#readme",
-  "module": "fesm5/angular-bem.js",
-  "es2015": "fesm2015/angular-bem.js",
-  "esm5": "esm5/angular-bem.js",
-  "esm2015": "esm2015/angular-bem.js",
-  "fesm5": "fesm5/angular-bem.js",
-  "fesm2015": "fesm2015/angular-bem.js",
-  "typings": "angular-bem.d.ts",
-  "metadata": "angular-bem.metadata.json",
   "sideEffects": false,
   "dependencies": {
-    "tslib": "^1.9.0"
+    "tslib": "^2.0.0"
   },
-  "devDependencies": {
-    "@angular/compiler": "^6.0.7",
-    "@angular/compiler-cli": "^6.0.7",
-    "@angular/core": "^6.0.0",
-    "ng-packagr": "^3.0.3",
-    "rxjs": "^6.0.0",
-    "typescript": "~2.7.0"
+  "module": "fesm2015/angular-bem.mjs",
+  "es2020": "fesm2020/angular-bem.mjs",
+  "esm2020": "esm2020/angular-bem.mjs",
+  "fesm2020": "fesm2020/angular-bem.mjs",
+  "fesm2015": "fesm2015/angular-bem.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2020": "./esm2020/angular-bem.mjs",
+      "es2020": "./fesm2020/angular-bem.mjs",
+      "es2015": "./fesm2015/angular-bem.mjs",
+      "node": "./fesm2015/angular-bem.mjs",
+      "default": "./fesm2020/angular-bem.mjs"
+    }
   }
 }
